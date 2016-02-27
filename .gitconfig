@@ -1,0 +1,14 @@
+[core]
+	excludesfile = ~/.gitignore_global
+[alias]
+	a = add
+
+	ci = commit
+	c = commit -m
+
+	co = checkout
+	cm = checkout master
+	cb = checkout -b
+
+	st = status
+	
