@@ -1,5 +1,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
+	autocrlf = false
+	eol = lf
 [alias]
 	a = add
 
@@ -10,5 +12,23 @@
 	cm = checkout master
 	cb = checkout -b
 
+	pm = pull origin master
+	pum = push origin master
+	f = fetch -ap
+
 	st = status
-	
+	l = log --graph -n 20 --date=iso --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%an %Cred%d %Creset%s %b' --all --date-order
+	graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+	lf = log --graph --oneline --decorate=full
+	d = diff --color=always
+	dc = diff --cached
+	dw = diff --color=always --word-diff
+	sh = show --color=always
+
+	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+
+[color]
+	ui = true
+[push]
+	default = current
+
