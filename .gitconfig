@@ -17,7 +17,8 @@
 	f = fetch -ap
 
 	st = status
-	l = log --graph -n 20 --date=iso --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%an %Cred%d %Creset%s %b' --all --date-order
+	l = log --graph --date=iso --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%an %Cred%d %Creset%s %b' --all --date-order
+	ln = log --graph -n 20 --date=iso --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%an %Cred%d %Creset%s %b' --all --date-order
 	graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
 	lf = log --graph --oneline --decorate=full
 	d = diff --color=always
