@@ -4,4 +4,6 @@
 !*.md
 !.bashrc
 !git-completion.bash
+!.atom
+!.atom/*
 

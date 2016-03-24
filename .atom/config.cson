@@ -1,0 +1,15 @@
+"*":
+  core: {}
+  editor:
+    invisibles: {}
+  "exception-reporting":
+    userId: "cc3f1e7b-f30b-791c-f4e5-f9b79a01b721"
+  "language-babel":
+    allowLocalOverride: true
+    babelSourcePath: "src/main/webapp/assets/org"
+    createTargetDirectories: false
+  "markdown-preview": {}
+  minimap: {}
+  react: {}
+  welcome:
+    showOnStartup: false
