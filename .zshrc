@@ -1,7 +1,10 @@
 fpath=(~/.zsh $fpath)
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 autoload -U compinit
 compinit -u
+
+export PATH="$PATH:/Users/cw-katsuno/Library/Python/2.7/bin"
 
 # coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -19,10 +22,11 @@ export HISTSIZE=1000
 # 履歴ファイルに保存される履歴の件数
 export SAVEHIST=100000
 
+setopt hist_ignore_all_dups  # 重複するコマンド行は古い方を削除
 setopt hist_ignore_dups      # 直前と同じコマンドラインはヒストリに追加しない
 setopt share_history         # コマンド履歴ファイルを共有する
 setopt append_history        # 履歴を追加 (毎回 .zsh_history を作るのではなく)
-setopt inc_append_history    # 履歴をインクリメンタルに追加
+# setopt inc_append_history    # 履歴をインクリメンタルに追加
 setopt hist_no_store         # historyコマンドは履歴に登録しない
 
 # zsh-git-prompt
@@ -64,6 +68,9 @@ function peco-cdr () {
 
 zle -N peco-cdr
 bindkey '^E' peco-cdr
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
 
 ###
