@@ -20,6 +20,11 @@ bindkey "\e\e[C" forward-word
 autoload -Uz compinit && compinit
 
 # peco
+## mkdir ~/.cache
+## brew install peco
+## brew install gnu-sed
+
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 function peco-history-selection() {
     BUFFER="$(history -nr 1 | awk '!a[$0]++' | peco --query "$LBUFFER" | sed 's/\\n/\n/')"
