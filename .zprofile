@@ -14,8 +14,10 @@ setopt append_history        # 履歴を追加 (毎回 .zsh_history を作るの
 # setopt inc_append_history    # 履歴をインクリメンタルに追加
 setopt hist_no_store         # historyコマンドは履歴に登録しない
 
-bindkey "\e\e[D" backward-word
-bindkey "\e\e[C" forward-word
+# bindkey "\e\e[D" backward-word
+# bindkey "\e\e[C" forward-word
+bindkey '^[[1;3D' backward-word  # alt-left
+bindkey '^[[1;3C' forward-word   # alt-right
 
 autoload -Uz compinit && compinit
 
